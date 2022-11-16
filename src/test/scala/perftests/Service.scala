@@ -14,18 +14,14 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.perftests.example
+package perftests
 
-import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
-import uk.gov.hmrc.perftests.example.ExampleRequests._
+final case class Service(
+                          protocol: String,
+                          host: String,
+                          port: String
+                        ) {
 
-class ExampleSimulation extends PerformanceTestRunner {
-
-  setup("home-page", "Home Page") withRequests navigateToHomePage
-
-  setup("post-vat-return-period", "Post vat return period") withRequests postVatReturnPeriod
-
-  setup("get-turnover-page", "Get turnover page") withRequests getTurnoverPage
-
-  runSimulation()
+  def baseUrl: String =
+    s"$protocol://$host:$port"
 }
