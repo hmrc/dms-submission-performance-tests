@@ -1,7 +1,5 @@
-**This is a template README.md.  Be sure to update this with project specific content that describes your performance test project.**
-
 # dms-submission-performance-tests
-Performance test suite for the `<digital service name>`, using [performance-test-runner](https://github.com/hmrc/performance-test-runner) under the hood.
+Performance test suite for `dms-submission`, using [performance-test-runner](https://github.com/hmrc/performance-test-runner) under the hood.
 
 
 ## Running the tests
@@ -15,7 +13,7 @@ Run the following command to start the services locally:
 ```
 docker run --rm -d --name mongo -d -p 27017:27017 mongo:4.0
 
-sm --start PLATFORM_EXAMPLE_UI_TESTS -r --wait 100
+sm --start DMS_SUBMISSION_ALL -r --wait 100
 ```
 
 Using the `--wait 100` argument ensures a health check is run on all the services started as part of the profile. `100` refers to the given number of seconds to wait for services to pass health checks.
