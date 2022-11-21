@@ -43,7 +43,6 @@ class SubmissionSimulation extends Simulation {
       .formParam("metadata.source", "api-tests")
       .formParam("metadata.timeOfReceipt", DateTimeFormatter.ISO_DATE_TIME.format(LocalDateTime.now))
       .formParam("metadata.formId", "formId")
-      .formParam("metadata.numberOfPages", "1")
       .formParam("metadata.customerId", "customerId")
       .formParam("metadata.submissionMark", "submissionMark")
       .formParam("metadata.casKey", "casKey")
