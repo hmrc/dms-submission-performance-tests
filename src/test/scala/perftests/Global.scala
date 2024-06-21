@@ -16,7 +16,7 @@
 
 package perftests
 
-import akka.actor.ActorSystem
+import org.apache.pekko.actor.ActorSystem
 import play.api.libs.ws.ahc.StandaloneAhcWSClient
 import pureconfig._
 import pureconfig.generic.auto._
