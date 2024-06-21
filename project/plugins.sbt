@@ -3,6 +3,6 @@ resolvers += Resolver.url("HMRC-open-artefacts-ivy", url("https://open.artefacts
   Resolver.ivyStylePatterns
 )
 
-addSbtPlugin("uk.gov.hmrc" % "sbt-auto-build" % "3.6.0")
-
-addSbtPlugin("io.gatling" % "gatling-sbt" % "3.2.1")
+addSbtPlugin("uk.gov.hmrc" % "sbt-auto-build" % "3.22.0")
+addSbtPlugin("io.gatling" % "gatling-sbt" % "3.2.2")
+addDependencyTreePlugin
