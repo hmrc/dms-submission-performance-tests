@@ -46,7 +46,7 @@ object Global {
   val dmsSubmission: Service = configuration.at("services.dms-submission").loadOrThrow[Service]
   val dmsSubmissionStub: Service = configuration.at("services.dms-submission-stub").loadOrThrow[Service]
 
-  val internalAuthToken: String = configuration.at("internal-auth.token").loadOrThrow[String]
+  val internalAuthToken: String = sys.env("INTERNAL_AUTH_TOKEN")
 
   private implicit val system: ActorSystem = ActorSystem()
   val wsClient: StandaloneAhcWSClient = StandaloneAhcWSClient()
